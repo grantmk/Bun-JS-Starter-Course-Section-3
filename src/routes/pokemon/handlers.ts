@@ -23,9 +23,9 @@ export async function getPokemon(id: string) {
   }
 }
 
-export async function createPokemon(options: { name: string, level: string }) {
+export async function createPokemon(body: any) {
   try {
-    const { name, level } = options;
+    const { name, level } = body;
     return "Level: " + level + " Pokemon created. Name: " + name
   } catch (e: unknown) {
     console.error(`Error creating pokemon: ${e}`);
